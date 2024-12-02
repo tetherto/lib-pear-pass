@@ -1,7 +1,6 @@
 const test = require('brittle')
 const Autopass = require('./')
 const Corestore = require('corestore')
-const Hyperwarm = require('hyperswarm')
 const testnet = require('hyperdht/testnet')
 const tmp = require('test-tmp')
 
