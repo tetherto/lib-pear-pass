@@ -10,6 +10,7 @@ if (process.argv[3]) {
   pass = await pair.finished()
 } else {
   pass = new Autopass(store)
+  await pass.ready()
 }
 
 if (pass.base.writable) {
