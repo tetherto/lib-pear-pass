@@ -33,8 +33,9 @@ class AutopassPairer extends ReadyResource {
       bootstrap: this.bootstrap
     })
 
+    const store = this.store // we null this when passing it on, so avoid a nullptr
     this.swarm.on('connection', (connection, peerInfo) => {
-      this.store.replicate(connection)
+      store.replicate(connection)
     })
 
     this.pairing = new BlindPairing(this.swarm)
